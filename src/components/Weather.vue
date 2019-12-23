@@ -1,6 +1,9 @@
 <template>
   <div lass="weather">
-    <div v-if="current !== undefined" class="today">
+    <div
+      v-if="current !== undefined"
+      class="today"
+    >
       <div class="todayChild">
         <h1>{{ current.main.temp }}°C</h1>
         <h1>{{ current.weather[0].description }}</h1>
@@ -9,7 +12,10 @@
         <p>{{ current.main.humidity }}%</p>
       </div>
       <div class="todayChild">
-        <img src="../assets/weather/001-cloud.png" class="todayIcon">
+        <img
+          src="../assets/weather/001-cloud.png"
+          class="todayIcon"
+        >
       </div>
     </div>
     <div v-if="forecast !== undefined">
