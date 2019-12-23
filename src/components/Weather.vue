@@ -14,7 +14,7 @@
       >
         <h2>{{ getDate(item.dt) }}</h2>
         <h3>{{ item.weather[0].description }}</h3>
-        <p>{{ item.main.temp_max + "/" + item.main.temp_min }}°C</p>
+        <p>{{ item.main.temp_max + "/" + item.main.temp_min + "°C " + item.main.humidity + "%" }}</p>
       </div>
     </div>
   </div>
