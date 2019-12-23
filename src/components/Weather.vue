@@ -1,10 +1,44 @@
 <template>
-  <div>
-    <h1>MIN {{ daily.Temperature.Maximum.Value }} °C</h1>
-    <h1>MAX {{ daily.Temperature.Minimum.Value }} °C</h1>
-    <h3></h3>
+  <div class="weather">
+    <div class="today">
+      <div class="todayChild">
+        <h1>{{ daily.Temperature.Maximum.Value }}°C / {{ daily.Temperature.Minimum.Value }}°C</h1>
+      </div>
+      <div class="todayChild">
+        <img src="../assets/weather/001-cloud.png" class="todayIcon">
+      </div>
+    </div>
   </div>
 </template>
+
+<style>
+    h1 {
+        font-size: 1.7em;
+    }
+    .weather {
+        width: 50vw;
+        background-color: grey;
+        height: 50vh;
+        margin: 0;
+
+    }
+    .today {
+        background-color: red;
+        height: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+
+    }
+    .todayChild {
+        background-color: blue
+    }
+    .todayIcon {
+        height: 100px;
+
+    }
+</style>
 
 <script>
 import axios from 'axios';
@@ -43,7 +77,3 @@ export default {
 
 }
 </script>
-
-<style>
-
-</style>
