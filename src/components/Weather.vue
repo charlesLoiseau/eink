@@ -1,30 +1,37 @@
 <template>
-  <div lass="weather">
+  <div class="weather">
     <div
       v-if="current !== undefined"
       class="today"
     >
       <div class="todayChild">
         <h1>{{ current.main.temp }}°C</h1>
-        <h1>{{ current.weather[0].description }}</h1>
+        
         <h2>{{ current.main.feels_like }}°C</h2>
         <h3>{{ current.main.temp_max + "/" + current.main.temp_min }}°C</h3>
         <p>{{ current.main.humidity }}%</p>
       </div>
       <div class="todayChild">
+        <h1>{{ current.weather[0].description }}</h1>
+      </div>
+      <div class="todayChild">
         <img
-          src="../assets/weather/001-cloud.png"
+          :src="'http://openweathermap.org/img/wn/' + current.weather[0].icon + '@2x.png'"
           class="todayIcon"
         >
       </div>
     </div>
-    <div v-if="forecast !== undefined">
+    <div 
+      v-if="forecast !== undefined"
+      class="forecast"
+    >
       <div 
-        v-for="item in forecast.list"
+        v-for="item in forecast.list.slice(0, 6)"
         :key="item.key"
+        class="forecastChild"
       >
-        <h2>{{ getDate(item.dt) }}</h2>
-        <h3>{{ item.weather[0].description }}</h3>
+        <h3>{{ getDate(item.dt) }}</h3>
+        <h4>{{ item.weather[0].description }}</h4>
         <p>{{ item.main.temp_max + "/" + item.main.temp_min + "°C " + item.main.humidity + "%" }}</p>
       </div>
     </div>
@@ -37,26 +44,31 @@
     }
     .weather {
         width: 50vw;
-        background-color: grey;
         height: 50vh;
         margin: 0;
-
     }
     .today {
-        background-color: red;
         height: 50%;
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex-direction: row;
-
     }
     .todayChild {
-        background-color: blue
+        text-align: center;
     }
     .todayIcon {
         height: 100px;
-
+    }
+    .forecast {
+        height: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+    }
+    .forecastChild {
+      text-align: center;
     }
 </style>
 
