@@ -8,8 +8,8 @@
         <h1>{{ current.main.temp }}°C</h1>
         
         <h2>{{ current.main.feels_like }}°C</h2>
-        <h3>{{ current.main.temp_max + "/" + current.main.temp_min }}°C</h3>
-        <p>{{ current.main.humidity }}%</p>
+        <h3>{{ current.main.temp_max + " / " + current.main.temp_min }}°C</h3>
+        <h3>{{ current.main.humidity }}%</h3>
       </div>
       <div class="todayChild">
         <h1>{{ current.weather[0].description }}</h1>
@@ -31,7 +31,7 @@
         class="forecastChild"
       >
         <h3>{{ getDate(item.dt) }}</h3>
-        <h4>{{ item.weather[0].description }}</h4>
+        <p>{{ item.weather[0].description }}</p>
         <p>{{ item.main.temp_max + " / " + item.main.temp_min + "°C " }}</p>
         <p>{{ item.main.humidity + "%" }}</p>
       </div>
@@ -49,11 +49,8 @@
     h3 {
       font: 0.8em sans-serif;
     }
-    h4 {
-      font: 0.7em sans-serif;
-    }
     p {
-      font: 0.6em sans-serif;
+      font: 0.7em sans-serif;
     }
     .weather {
         width: 50vw;
