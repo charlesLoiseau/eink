@@ -32,7 +32,8 @@
       >
         <h3>{{ getDate(item.dt) }}</h3>
         <h4>{{ item.weather[0].description }}</h4>
-        <p>{{ item.main.temp_max + "/" + item.main.temp_min + "°C " + item.main.humidity + "%" }}</p>
+        <p>{{ item.main.temp_max + " / " + item.main.temp_min + "°C " }}</p>
+        <p>{{ item.main.humidity + "%" }}</p>
       </div>
     </div>
   </div>
@@ -40,7 +41,19 @@
 
 <style>
     h1 {
-        font-size: 1.7em;
+      font: 1.3em sans-serif;
+    }
+    h2 {
+      font: 1em sans-serif;
+    }
+    h3 {
+      font: 0.8em sans-serif;
+    }
+    h4 {
+      font: 0.7em sans-serif;
+    }
+    p {
+      font: 0.6em sans-serif;
     }
     .weather {
         width: 50vw;
@@ -61,7 +74,6 @@
         height: 100px;
     }
     .forecast {
-        height: 50%;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -108,7 +120,8 @@ export default {
     methods: {
         getDate(date) {
             moment.locale('fr')
-            return moment(date * 1000).calendar()
+            var dt = moment.unix(date)
+            return dt.format(moment.HTML5_FMT.TIME)
         }
     }
 
