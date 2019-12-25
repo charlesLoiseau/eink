@@ -12,6 +12,7 @@
         <h3>{{ current.main.humidity }}%</h3>
       </div>
       <div class="todayChild">
+        <h1>{{ getDate(current.dt) }}</h1>
         <h1>{{ current.weather[0].description }}</h1>
       </div>
       <div class="todayChild">
