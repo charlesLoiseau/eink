@@ -42,21 +42,27 @@
 
 <style>
     h1 {
-      font: 1.3em sans-serif;
+      /* font: 1.3em sans-serif; */
+      font: 4em sans-serif;
     }
     h2 {
-      font: 1em sans-serif;
+      /* font: 1em sans-serif; */
+      font: 3em sans-serif;
     }
     h3 {
-      font: 0.8em sans-serif;
+      /* font: 0.8em sans-serif; */
+      font: 2em sans-serif;
     }
     p {
-      font: 0.7em sans-serif;
+      /* font: 0.7em sans-serif; */
+      font: 1.7em sans-serif;
     }
     .weather {
         /* width: 50vw; */
         /* height: 50vh; */
         margin: 0;
+        height: 100%;
+        width: 100%
     }
     .today {
         height: 50%;
@@ -69,7 +75,7 @@
         text-align: center;
     }
     .todayIcon {
-        height: 100px;
+        height: 300px;
     }
     .forecast {
         display: flex;
