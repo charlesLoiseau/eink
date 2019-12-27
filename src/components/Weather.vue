@@ -54,8 +54,8 @@
       font: 0.7em sans-serif;
     }
     .weather {
-        width: 50vw;
-        height: 50vh;
+        /* width: 50vw; */
+        /* height: 50vh; */
         margin: 0;
     }
     .today {
