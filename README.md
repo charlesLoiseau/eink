@@ -1,5 +1,5 @@
 # eink
-
+Station meteo qui vas etre afficher sur un ecran eink alimenter par une raspberry pi4
 ## Project setup
 ```
 yarn install
