@@ -1,24 +1,2 @@
 # eink
-Station meteo qui vas etre afficher sur un ecran eink alimenter par une raspberry pi4
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[![CodeFactor](https://www.codefactor.io/repository/github/charlesloiseau/eink/badge/master)](https://www.codefactor.io/repository/github/charlesloiseau/eink/overview/master)
