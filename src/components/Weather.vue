@@ -5,11 +5,11 @@
       class="today"
     >
       <div class="todayChild">
-        <h1>{{ current.main.temp }}°C</h1>
+        Actuel <h1>{{ current.main.temp }}°C</h1>
         
-        <h2>{{ current.main.feels_like }}°C</h2>
-        <h3>{{ current.main.temp_max + " / " + current.main.temp_min }}°C</h3>
-        <h3>{{ current.main.humidity }}%</h3>
+        Resentie <h2>{{ current.main.feels_like }}°C</h2>
+        Min / Max <h3>{{ current.main.temp_max + " / " + current.main.temp_min }}°C</h3>
+        Humidité <h3>{{ current.main.humidity }}%</h3>
       </div>
       <div class="todayChild">
         <h1>{{ getDate(current.dt) }}</h1>
@@ -93,12 +93,12 @@ import axios from 'axios';
 import moment from 'moment';
 
 async function getCurentWeather() {
-    const response = await axios.get("https://api.openweathermap.org/data/2.5/weather?zip=93460,fr&units=metric&APPID=3acd0b10fd8f7ee76e05204efd0ce7af")
+    const response = await axios.get("https://api.openweathermap.org/data/2.5/weather?zip=93460,fr&units=metric&appid=3acd0b10fd8f7ee76e05204efd0ce7af")
     return response.data
 
 }
 async function getForecastWeather() {
-    const response = await axios.get("https://api.openweathermap.org/data/2.5/forecast?zip=93460,fr&units=metric&APPID=3acd0b10fd8f7ee76e05204efd0ce7af")
+    const response = await axios.get("https://api.openweathermap.org/data/2.5/forecast?zip=93460,fr&units=metric&appid=3acd0b10fd8f7ee76e05204efd0ce7af")
     return response.data
 }
 
